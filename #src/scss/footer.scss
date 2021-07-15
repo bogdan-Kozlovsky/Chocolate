@@ -1,0 +1,77 @@
+.footer {
+  position: relative;
+  z-index: 2;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  @include adaptiv-value("padding-top", 216, 100, 1);
+  @include adaptiv-value("padding-bottom", 138, 100, 1);
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    background: rgba(255, 188, 170, 0.52);
+  }
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    margin: 0 40px 17px 0;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 40px 17px 0;
+  }
+
+  &__item {
+    margin-bottom: 5px;
+    + .footer__item {
+      @include adaptiv-value("margin-left", 32, 20, 1);
+    }
+  }
+
+  &__link {
+    color: #3f2626;
+  }
+
+  &__box {
+    display: flex;
+    margin-bottom: 17px;
+  }
+
+  &__phone {
+    color: $mainColor;
+    @include adaptiv-value("margin-right", 55, 20, 1);
+  }
+
+  &__btn {
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: 0.205em;
+    text-transform: uppercase;
+    color: #3f2626;
+  }
+
+  &__social-list {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__social-item {
+    + .footer__social-item {
+      margin-left: 11px;
+    }
+  }
+}

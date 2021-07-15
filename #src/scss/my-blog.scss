@@ -1,0 +1,36 @@
+.my-blog {
+  position: relative;
+  background: rgba(255, 188, 170, 0.52);
+  @include adaptiv-value("padding-top", 25, 15, 1);
+  @include adaptiv-value("padding-bottom", 25, 15, 1);
+  &__title {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  &__items {
+    overflow: hidden;
+  }
+
+  &__item {
+    // margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    width: 370px;
+    height: 493px;
+  }
+
+  &__img {
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  .swiper-navigation {
+    top: 50%;
+    transform: translateY(-50%);
+    color: #e57556;
+  }
+}
+
+.title {
+}
